@@ -5,6 +5,9 @@ from application import views
 
 
 app.add_url_rule('/', view_func=views.home, methods=['GET',]) # Main page
+app.add_url_rule('/drug/orders/', view_func=views.add_order, methods=['POST',])
+app.add_url_rule('/drug/orders/', view_func=views.get_order, methods=['GET',])
+app.add_url_rule('/drug/orders/', view_func=views.delete_order, methods=['DELETE',])
 
 ## URL dispatch rules
 # App Engine warm up handler
